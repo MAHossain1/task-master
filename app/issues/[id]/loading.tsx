@@ -1,5 +1,5 @@
-import { Box, Card, Flex, Heading } from "@radix-ui/themes";
 import { Skeleton } from "@/app/components";
+import { Box, Card, Flex, Heading } from "@radix-ui/themes";
 
 const IssueLoadingDetails = () => {
   return (

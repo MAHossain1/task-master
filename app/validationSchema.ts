@@ -1,6 +1,4 @@
-import { Status } from "@prisma/client";
-
-import { object, z } from "zod";
+import { z } from "zod";
 
 const StatusEnum = z.enum(["OPEN", "IN_PROGRESS", "CLOSED"]);
 

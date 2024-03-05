@@ -27,6 +27,7 @@ const Pagination = ({ itemCount, pageSize, currentPage }: Props) => {
     const params = new URLSearchParams(searchParams);
     params.set("page", page.toString());
     router.push("?" + params.toString());
+    console.log("clicked");
   };
 
   return (
@@ -38,7 +39,7 @@ const Pagination = ({ itemCount, pageSize, currentPage }: Props) => {
         color="gray"
         variant="soft"
         disabled={currentPage === 1}
-        onChange={() => changePage(1)}
+        onClick={() => changePage(1)}
       >
         <DoubleArrowLeftIcon />
       </Button>
@@ -46,7 +47,7 @@ const Pagination = ({ itemCount, pageSize, currentPage }: Props) => {
         color="gray"
         variant="soft"
         disabled={currentPage === 1}
-        onChange={() => changePage(currentPage - 1)}
+        onClick={() => changePage(currentPage - 1)}
       >
         <ChevronLeftIcon />
       </Button>
@@ -54,7 +55,7 @@ const Pagination = ({ itemCount, pageSize, currentPage }: Props) => {
         color="gray"
         variant="soft"
         disabled={currentPage === pageCount}
-        onChange={() => changePage(currentPage + 1)}
+        onClick={() => changePage(currentPage + 1)}
       >
         <ChevronRightIcon />
       </Button>
@@ -62,7 +63,7 @@ const Pagination = ({ itemCount, pageSize, currentPage }: Props) => {
         color="gray"
         variant="soft"
         disabled={currentPage === pageCount}
-        onChange={() => changePage(pageCount)}
+        onClick={() => changePage(pageCount)}
       >
         <DoubleArrowRightIcon />
       </Button>
